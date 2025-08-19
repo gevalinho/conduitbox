@@ -10,12 +10,12 @@ export default function RootLayout({
   return (
     <html lang="en">
         <head>
-        <link rel="icon" href="/assets/img/favicon.svg" />
+        <link rel="icon" href="/assets/img/conduit_box log.png" />
         <link
           rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;900&family=Kanit:wght@400;500;600;700&display=swap"
         />
-        <title>Vixan - Digital  Creative Agency Next js Template</title>
+        <title>ConduitBox – A creative digital agency specializing in branding, web development, mobile app development, and building strong online presence for businesses and individuals.</title>
       </head>
 
       <body>{children}</body>

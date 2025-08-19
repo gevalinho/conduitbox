@@ -3,6 +3,7 @@
     <style>
       .cls-1 {
         font-size: 194.476px;
+        fill: #fff;
         font-family: "Gill Sans MT";
         font-weight: 700;
       }
