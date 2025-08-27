@@ -1,8 +1,8 @@
 'use client'
 import React, { useState } from 'react';
-import award_img_1 from "@/assets/img/award_1.svg";
-import award_img_2 from "@/assets/img/award_2.svg";
-import award_img_3 from "@/assets/img/award_3.svg";
+import award_img_1 from "@/assets/img/award_1.png";
+import award_img_2 from "@/assets/img/award_2.png";
+import award_img_3 from "@/assets/img/award_3.png";
 
 import award_thumb_1 from "@/assets/img/award_thumb_1.jpg";
 import award_thumb_2 from "@/assets/img/award_thumb_2.jpg";
@@ -76,7 +76,7 @@ const OurPromise = ({style_2}: any) => {
                 className={`cs_card cs_style_2 cs_hover_tab anim_div_ShowDowns ${activeTab === i ? 'active' : ''}`}>
                 <div className="cs_card_left">
                   <div className="cs_card_logo">
-                    {/* <Image src={item.ward_img} alt="Award" /> */}
+                    <Image src={item.ward_img} alt="Award" />
                   </div>
                   <div>
                     <h2 className="cs_card_title">{item.title}</h2>
