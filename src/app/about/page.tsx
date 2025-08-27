@@ -15,6 +15,7 @@ import Wrapper from '@/layouts/Wrapper';
 import FooterOne from '@/layouts/footers/FooterOne';
 import HeaderOne from '@/layouts/headers/HeaderOne';
 import VideoPopup from '@/components/modals/VideoPopup';
+import OurPromise from '@/components/awards/OurPromise';
 
 // export const metadata = {
 //   title: "About Vixan - Digital  Creative Agency Next js Template",
@@ -30,11 +31,12 @@ const index = () => {
         <div id="smooth-content">
           <main>
             <BannerAbout />
-            <VideoHomeOne style_2={true} setIsVideoOpen={setIsVideoOpen} />
-            <FunFactHomeOne style_3={true} />
+            {/* <VideoHomeOne style_2={true} setIsVideoOpen={setIsVideoOpen} /> */}
+            {/* <FunFactHomeOne style_3={true} /> */}
             <About />
-            <TeamHomeTwo style_2={true} style_3={true} />
-            <AwardsHomeOne style_2={true} />
+            {/* <TeamHomeTwo style_2={true} style_3={true} /> */}
+            {/* <AwardsHomeOne style_2={true} /> */}
+            <OurPromise style_2={true} />
             <Testimonial />
             <Gellary style_2={true} />
             <BrandHomeOne />

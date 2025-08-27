@@ -2,6 +2,7 @@
 import React from 'react';
 import Image from 'next/image';
 import logo from '@/assets/img/logo.svg';
+import Logo_white from '@/assets/img/Logo_white.png';
 
 const BannerAbout = () => {
   return (
@@ -12,7 +13,8 @@ const BannerAbout = () => {
         <div className="cs_section_heading cs_style_1 cs_type_1">
           <div className="cs_section_heading_text">
             <h2 className="cs_section_title anim_text_writting">
-              How Our Agency is Transforming <br /> Businesses and Brands through <br /> Online Solutions
+              Transforming Businesses <br/>Through Bold Design, Intelligent<br/> Strategy, And Innovative Digital Solutions.
+              {/* How Our Agency is Transforming <br /> Businesses and Brands through <br /> Online Solutions */}
             </h2>
           </div>
           <div className="cs_section_heading_right">
@@ -24,7 +26,7 @@ const BannerAbout = () => {
                   <g fontSize="22.1px">
                     <text textAnchor="start">
                       <textPath className="coloring" href="#textPath" startOffset="0%">
-                        Vixan Digital Agency . Vixan Digital Agency . &nbsp;
+                       The unseen wiring   . with ideas wired to win . &nbsp; &nbsp;
                       </textPath>
                     </text>
                   </g>
@@ -32,6 +34,7 @@ const BannerAbout = () => {
               </div>
               <div className="position-absolute cs_ceneter_text">
                 <Image src={logo} alt="" />
+                {<Image src={Logo_white} alt="Logo" />}
               </div>
             </div>
           </div>

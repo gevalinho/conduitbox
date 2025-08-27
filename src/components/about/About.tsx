@@ -1,11 +1,13 @@
  
 
 import React from 'react';
+// import ShowMoreText from 'react-show-more-text';
 import agency_story_1 from "@/assets/img/agency_story_1.jpg"
 import agency_story_2 from "@/assets/img/agency_story_2.jpg"
 import agency_story_4 from "@/assets/img/agency_story_4.jpg"
 import agency_story_3 from "@/assets/img/agency_story_3.jpg"
 import Image from 'next/image';
+
 
 
 interface DataType {
@@ -14,9 +16,14 @@ interface DataType {
   des: string;
 }
 const about_content: DataType = {
-  subtitle: `Our Agency Story`,
-  title: `How Our Agency is Pushing the Boundaries of Online Marketing and Design`,
-  des: `Digital agency! We specialize in helping businesses like yours succeed online. From website design and development to digital marketing and advertising, we have the tools and expertise to elevate your online presence. Let us help you lione evolving world of digital to drive growth and reach your goals.`,
+  subtitle: `Our Story`,
+  title: `Founded in July 2015 in Calabar, The ConduitBox was born out of a simple but powerful idea:`,
+  des: `to be the “conduit” — the unseen wiring — that connects businesses to ideas outside the box.
+At the time, Solomon was just beginning his professional journey as a designer, while Geva-Eval had already honed his craft in software and website development. Recognizing the strength in collaboration, we joined forces, pooling our talents to serve clients more effectively, more creatively, and more professionally.
+What started as a partnership of two passionate creators has grown into a design and technology agency with a clear mission: to transform businesses through bold design, intelligent strategy, and innovative digital solutions.
+From building timeless brand identities to designing seamless websites and interfaces, The ConduitBox has remained committed to helping startups, small businesses, and multinationals alike communicate their vision and scale with clarity and confidence.
+But beyond services, we are partners in growth. We believe great ideas shouldn’t just look good — they should work, inspire, and move people. That’s the power of connection. That’s the power of The ConduitBox.
+`,
 }
 const { subtitle, title, des } = about_content
 
@@ -57,7 +64,8 @@ const About = () => {
                       {des}
                     </p>
                     <p className="cs_ternary_color">
-                      {des}
+
+                      {/* {des} */}
                     </p>
                   </div>
                 </div>
@@ -66,7 +74,7 @@ const About = () => {
             <div className="cs_height_385 cs_height_lg_120"></div>
           </div>
         </div>
-        <div className="container">
+        {/* <div className="container">
           <div className="cs_agency agency_about_images_posation">
             <div className="cs_img_section_1">
               <Image src={agency_story_1} alt="image-here" className="w-100" />
@@ -81,7 +89,7 @@ const About = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </section>
     </>
   );
