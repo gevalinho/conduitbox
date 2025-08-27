@@ -38,7 +38,7 @@ const index = () => {
             {/* <AwardsHomeOne style_2={true} /> */}
             <OurPromise style_2={true} />
             {/* <Testimonial /> */}
-            <Gellary style_2={true} />
+            {/* <Gellary style_2={true} /> */}
             {/* <BrandHomeOne /> */}
           </main>
           <FooterOne />
