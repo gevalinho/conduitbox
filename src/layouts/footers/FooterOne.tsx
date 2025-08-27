@@ -2,7 +2,8 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import footer_logo from "@/assets/img/footer_logo.svg";
+// import footer_logo from "@/assets/img/footer_logo.svg";
+import footer_logo from "@/assets/img/Logo_white.svg";
 import { CopyRight, SocialLinks } from '@/components/common/SocialLinks';
 
 interface DataType {
@@ -17,10 +18,10 @@ interface DataType {
 }
 
 const footer_data: DataType = {
-  email: `info@email.com`,
-  phone: `(406) 555-0120`,
-  location: `46 JOHN ST TORONTO ON M5V 3W2`,
-  footer_info: `Welcome to our digital agency We specialize in helping business most like yours succeed online. From website design and development.`,
+  email: ``,
+  phone: ``,
+  location: ``,
+  footer_info: `Founded in July 2015 in Calabar, The ConduitBox was born out of a simple but powerful idea: to be the “conduit” — the unseen wiring — that connects businesses to ideas outside the box.`,
   links: [
     { title: `HOME`, link: "/" },
     { title: `ABOUT`, link: "/about" },

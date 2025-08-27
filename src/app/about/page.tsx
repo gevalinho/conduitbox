@@ -16,6 +16,7 @@ import FooterOne from '@/layouts/footers/FooterOne';
 import HeaderOne from '@/layouts/headers/HeaderOne';
 import VideoPopup from '@/components/modals/VideoPopup';
 import OurPromise from '@/components/awards/OurPromise';
+import SubscribeHomeOne from '@/components/subscribe/SubscribeHomeOne';
 
 // export const metadata = {
 //   title: "About Vixan - Digital  Creative Agency Next js Template",
@@ -40,6 +41,7 @@ const index = () => {
             {/* <Testimonial /> */}
             {/* <Gellary style_2={true} /> */}
             {/* <BrandHomeOne /> */}
+            <SubscribeHomeOne />
           </main>
           <FooterOne />
         </div>

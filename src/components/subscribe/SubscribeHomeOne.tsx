@@ -1,6 +1,20 @@
 'use client'
 import React from 'react';
 
+interface DataType {
+  subtitle: string;
+  title: string;
+  des: string;
+}
+const about_content: DataType = {
+  subtitle: `Our Story`,
+  title: `Founded in July 2015 in Calabar, The ConduitBox was born out of a simple but powerful idea:`,
+  des: `If you’re ready to elevate your brand, sharpen your identity, and build meaningful connections with your audience, let’s make it happen — with ideas wired to win.
+`,
+}
+const { subtitle, title, des } = about_content
+
+
 const SubscribeHomeOne = () => {
 
   const handleSuubmit = (e : any) => {
@@ -37,12 +51,20 @@ const SubscribeHomeOne = () => {
           <div className="cs_section_heading cs_style_1 cs_color_1 text-center">
             <div className="cs_section_heading_text">
               <h2 className="cs_section_title anim_text_upanddowns">
-                Stay Ahead With Our Top Notch <br />Digital Services
-              </h2>
+                {/* Stay Ahead With Our Top Notch <br />Digital Services */}
+                📩 Start your project with us today. <br/>Let’s connect.
+              </h2> 
             </div>
           </div>
-          <div className="cs_height_70 cs_height_lg_40"></div>
-          <form className="cs_newsletter_form" onSubmit={handleSuubmit}>
+          <div className="cs_newsletter_form">
+             <div className="cs_footer_info">
+                  <div className="">
+                    <p className="cs_ternary_color cs_height_lg_50">
+                      {des}
+                    </p>   
+                  </div>
+                </div></div>      
+          <form className="cs_newsletter_form" onSubmit={handleSuubmit}>          
             <input type="text" className="cs_newsletter_input" placeholder="Enter Your Email" />
             <button className="cs_newsletter_btn">
               <svg width="30" height="26" viewBox="0 0 30 26" fill="none" xmlns="http://www.w3.org/2000/svg">
