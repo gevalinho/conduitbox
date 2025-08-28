@@ -7417,6 +7417,14 @@ label {
     .cs_icon {
         margin-top: 0px;
     }
+
+
+.cs_site_branding .logo-dark { display:block; }
+.cs_site_branding .logo-white { display:none; }
+.dark .cs_site_branding .logo-dark { display:none; }
+.dark .cs_site_branding .logo-white { display:block; }
+
+
 }
 
 

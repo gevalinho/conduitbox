@@ -1,34 +1,37 @@
 
 import React from 'react';
+import  { services } from "@/lib/services";
+const service_data = services;
 
 
-interface DataType {
-  id: string;
-  title: string;
-  description: string;
-}
-const service_data: DataType[] = [
-  {
-    id: 'one',
-    title: "Understand",
-    description: `Welcome to our digital agency We specialize in helping your business most`,
-  },
-  {
-    id: 'Two',
-    title: "Design",
-    description: `Welcome to our digital agency We specialize in helping your business most`,
-  },
-  {
-    id: 'Three',
-    title: "Development",
-    description: `Welcome to our digital agency We specialize in helping your business most`,
-  },
-  {
-    id: 'Four',
-    title: "Testing",
-    description: `Welcome to our digital agency We specialize in helping your business most`,
-  },
-]
+
+// interface DataType {
+//   id: string;
+//   title: string;
+//   description: string;
+// }
+// const service_data: DataType[] = [
+//   {
+//     id: 'one',
+//     title: "Understand",
+//     description: `Welcome to our digital agency We specialize in helping your business most`,
+//   },
+//   {
+//     id: 'Two',
+//     title: "Design",
+//     description: `Welcome to our digital agency We specialize in helping your business most`,
+//   },
+//   {
+//     id: 'Three',
+//     title: "Development",
+//     description: `Welcome to our digital agency We specialize in helping your business most`,
+//   },
+//   {
+//     id: 'Four',
+//     title: "Testing",
+//     description: `Welcome to our digital agency We specialize in helping your business most`,
+//   },
+// ]
 const Service = () => {
   return (
     <>
@@ -67,7 +70,7 @@ const Service = () => {
 
                       <h6 className="cs_work_title">{item.title}</h6>
                       <p className="cs_work_subtitle">
-                        {item.description}
+                        {item.des}
                       </p>
                     </div>
 

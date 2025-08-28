@@ -3,6 +3,7 @@ import React from 'react';
 import Image from 'next/image';
 import logo from '@/assets/img/logo.svg';
 import Logo_white from '@/assets/img/Logo_white.png';
+import Link from 'next/link';
 
 const BannerAbout = () => {
   return (
@@ -32,10 +33,17 @@ const BannerAbout = () => {
                   </g>
                 </svg>
               </div>
-              <div className="position-absolute cs_ceneter_text">
-                <Image src={logo} alt="" />
-                {<Image src={Logo_white} alt="Logo" />}
+             
+
+              <div className="position-absolute cs_ceneter_text cs_primary_font ">
+                <Link href="/">
+                  <Image src={logo} alt="Logo" className="logo-dark" />
+                  <Image src={Logo_white} alt="Logo" className="logo-white" />
+                </Link>
               </div>
+   
+
+        
             </div>
           </div>
         </div>

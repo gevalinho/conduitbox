@@ -1,36 +1,17 @@
 
 import React from 'react';
-
-interface DataType {
-  id: string;
-  title: string;
-  description: string;
-}
-const service_data: DataType[] = [
-  {
-    id: 'one',
-    title: "Understand",
-    description: `Welcome to our digital agency We specialize in helping your business most`,
-  },
-  {
-    id: 'Two',
-    title: "Design",
-    description: `Welcome to our digital agency We specialize in helping your business most`,
-  },
-  {
-    id: 'Three',
-    title: "Development",
-    description: `Welcome to our digital agency We specialize in helping your business most`,
-  },
-  {
-    id: 'Four',
-    title: "Testing",
-    description: `Welcome to our digital agency We specialize in helping your business most`,
-  },
-]
+import { services } from "@/lib/services";
+import type { Service } from "@/lib/services";
+const service_data = services;
 
 
-const ServiceAreaDetails = () => {
+
+type Props = { service?: Service };
+
+
+const ServiceAreaDetails = ({ service }: Props) => {
+   const title = service?.title ?? "Our Service";
+  const des = service?.des ?? "";
   return (
     <>
       <div className="cs_height_150 cs_height_lg_50"></div>
@@ -64,7 +45,7 @@ const ServiceAreaDetails = () => {
 
                     <h6 className="cs_work_title">{item.title}</h6>
                     <p className="cs_work_subtitle">
-                      {item.description}
+                      {item.des}
                     </p>
                   </div>
                 ))}

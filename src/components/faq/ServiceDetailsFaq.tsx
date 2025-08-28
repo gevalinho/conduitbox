@@ -2,6 +2,7 @@
 'use client'
 
 import React, { useState } from 'react';
+type Props = { serviceslug?: string };
 
 
 interface DataType {
@@ -57,7 +58,7 @@ const {
 } = service_faq_content
 
 
-const ServiceDetailsFaq = () => {
+const ServiceDetailsFaq = ({ serviceslug }: Props) => {
 
   const [activeIndex, setActiveIndex] = useState<number | null>(0);
 
@@ -101,11 +102,11 @@ const ServiceDetailsFaq = () => {
               </div>
               <p>{description} </p>
               <div>
-                <ul>
+                {/* <ul>
                   {features.map((item, i) => (
                     <li key={i}>{item}</li>
                   ))}
-                </ul>
+                </ul> */}
               </div>
             </div>
             <div className="cs_back_to_services_btn">

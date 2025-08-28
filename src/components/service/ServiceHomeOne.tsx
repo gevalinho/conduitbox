@@ -2,40 +2,44 @@
 
 import React from 'react';
 import Link from 'next/link';
+import { services } from "@/lib/services";
 
-interface DataType {
-  id: number;
-  title: string;
-  des: string;
-}[]
+const service_data = services;
 
-const service_data: DataType[] = [
-  {
-    id: 1,
-    title: `Creative Design`,
-    des: `We don’t just make things look beautiful — we give brands a voice that resonates. From logos and brand identity systems to marketing collaterals, pitch decks, and campaigns, we create visual languages that inspire trust and recognition.
-Your idea gets a face. Your brand gets a personality.`
-  },
-  {
-    id: 2,
-    title: `Product & UX Design`,
-    des: `Every successful product begins with empathy. We dive deep into user research, map journeys, create wireframes, and design interfaces that are not only functional but delightful. Whether it’s a mobile app, a SaaS platform, or a web tool, we design experiences that keep users coming back.
-Your users don’t just use your product — they enjoy it.`
-  },
-  {
-    id: 3,
-    title: `Software Development (Web & Mobile)`,
-    des: `From sleek websites to intuitive mobile applications, we build digital platforms that scale with your growth. Our team blends creativity with technical expertise to deliver fast, secure, and future-ready solutions.
-You dream it, we code it into reality.`
-  },
-  {
-    id: 4,
-    title: `Digital Marketing`,
-    des: `Great brands deserve to be seen. Through SEO, PPC, email campaigns, and digital strategy, we make sure your business isn’t just online — it’s found, remembered, and trusted.
-Because visibility is the first step to impact.`
-  },
 
-]
+// interface DataType {
+//   id: number;
+//   title: string;
+//   des: string;
+// }[]
+
+// const service_data: DataType[] = [
+//   {
+//     id: 1,
+//     title: `Creative Design`,
+//     des: `We don’t just make things look beautiful — we give brands a voice that resonates. From logos and brand identity systems to marketing collaterals, pitch decks, and campaigns, we create visual languages that inspire trust and recognition.
+// Your idea gets a face. Your brand gets a personality.`
+//   },
+//   {
+//     id: 2,
+//     title: `Product & UX Design`,
+//     des: `Every successful product begins with empathy. We dive deep into user research, map journeys, create wireframes, and design interfaces that are not only functional but delightful. Whether it’s a mobile app, a SaaS platform, or a web tool, we design experiences that keep users coming back.
+// Your users don’t just use your product — they enjoy it.`
+//   },
+//   {
+//     id: 3,
+//     title: `Software Development (Web & Mobile)`,
+//     des: `From sleek websites to intuitive mobile applications, we build digital platforms that scale with your growth. Our team blends creativity with technical expertise to deliver fast, secure, and future-ready solutions.
+// You dream it, we code it into reality.`
+//   },
+//   {
+//     id: 4,
+//     title: `Digital Marketing`,
+//     des: `Great brands deserve to be seen. Through SEO, PPC, email campaigns, and digital strategy, we make sure your business isn’t just online — it’s found, remembered, and trusted.
+// Because visibility is the first step to impact.`
+//   },
+
+// ]
 
 const ServiceHomeOne = () => {
   return (
@@ -77,7 +81,7 @@ const ServiceHomeOne = () => {
                 <div className="cs_card_right">
                   <div className="cs_card_right_in">
                     <h2 className="cs_card_title">
-                      <Link href="/service-details">{item.title}</Link>
+                      <Link href={`/service-details/${item.slug}`}>{item.title}</Link>
                     </h2>
                     <div className="cs_card_subtitle">
                       {item.des}
@@ -85,7 +89,7 @@ const ServiceHomeOne = () => {
                   </div>
                 </div>
                 <div className="cs_card_link_wrap">
-                  <Link href="/service-details" className="cs_card_link">
+                  <Link href={`/service-details/${item.slug}`} className="cs_card_link">
                     <span>
                       <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
