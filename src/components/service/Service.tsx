@@ -5,33 +5,6 @@ const service_data = services;
 
 
 
-// interface DataType {
-//   id: string;
-//   title: string;
-//   description: string;
-// }
-// const service_data: DataType[] = [
-//   {
-//     id: 'one',
-//     title: "Understand",
-//     description: `Welcome to our digital agency We specialize in helping your business most`,
-//   },
-//   {
-//     id: 'Two',
-//     title: "Design",
-//     description: `Welcome to our digital agency We specialize in helping your business most`,
-//   },
-//   {
-//     id: 'Three',
-//     title: "Development",
-//     description: `Welcome to our digital agency We specialize in helping your business most`,
-//   },
-//   {
-//     id: 'Four',
-//     title: "Testing",
-//     description: `Welcome to our digital agency We specialize in helping your business most`,
-//   },
-// ]
 const Service = () => {
   return (
     <>

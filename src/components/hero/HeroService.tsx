@@ -1,47 +1,52 @@
 
 import React from 'react';
 import Link from 'next/link';
+import { getServiceBySlug, serviceParams } from "@/lib/services";
+import { notFound } from "next/navigation";
+import { services } from "@/lib/services";
+const banner_data = services;
 
 
-interface DataType {
-  id: number;
-  title: string;
-  description: string;
-}
 
-const banner_data:DataType[] = [
-  {
-    id: 1,
-    title: "Application Development",
-    description: "Welcome to our digital agency We specialize in helping businesses like yours succeed online. From website design and development to digital marketing agency.",
-  },
-  {
-    id: 2,
-    title: "Web Development",
-    description: "Welcome to our digital agency We specialize in helping businesses like yours succeed online. From website design and development to digital marketing agency.",
-  },
-  {
-    id: 3,
-    title: "Digital Services",
-    description: "Welcome to our digital agency We specialize in helping businesses like yours succeed online. From website design and development to digital marketing agency.",
-  },
-  {
-    id: 4,
-    title: "Digital Product Design",
-    description: "Welcome to our digital agency We specialize in helping businesses like yours succeed online. From website design and development to digital marketing agency.",
-  },
-  {
-    id: 5,
-    title: "Digital Marketing",
-    description: "Welcome to our digital agency We specialize in helping businesses like yours succeed online. From website design and development to digital marketing agency.",
-  },
-  {
-    id: 6,
-    title: "IOS App Development",
-    description: "Welcome to our digital agency We specialize in helping businesses like yours succeed online. From website design and development to digital marketing agency.",
-  },
+// interface DataType {
+//   id: number;
+//   title: string;
+//   description: string;
+// }
 
-]
+// const banner_data:DataType[] = [
+//   {
+//     id: 1,
+//     title: "Application Development",
+//     description: "Welcome to our digital agency We specialize in helping businesses like yours succeed online. From website design and development to digital marketing agency.",
+//   },
+//   {
+//     id: 2,
+//     title: "Web Development",
+//     description: "Welcome to our digital agency We specialize in helping businesses like yours succeed online. From website design and development to digital marketing agency.",
+//   },
+//   {
+//     id: 3,
+//     title: "Digital Services",
+//     description: "Welcome to our digital agency We specialize in helping businesses like yours succeed online. From website design and development to digital marketing agency.",
+//   },
+//   {
+//     id: 4,
+//     title: "Digital Product Design",
+//     description: "Welcome to our digital agency We specialize in helping businesses like yours succeed online. From website design and development to digital marketing agency.",
+//   },
+//   {
+//     id: 5,
+//     title: "Digital Marketing",
+//     description: "Welcome to our digital agency We specialize in helping businesses like yours succeed online. From website design and development to digital marketing agency.",
+//   },
+//   {
+//     id: 6,
+//     title: "IOS App Development",
+//     description: "Welcome to our digital agency We specialize in helping businesses like yours succeed online. From website design and development to digital marketing agency.",
+//   },
+
+// ]
 
 const HeroService = () => {
   return (
@@ -52,7 +57,7 @@ const HeroService = () => {
           <div className="cs_section_heading cs_style_1">
             <div className="cs_section_heading_text">
               <h2 className="cs_section_title anim_word_writting">
-                Transform Your Online Presence with Our Digital Agency Services
+                Creativity + Strategy + Technology,<br/> working in sync.
               </h2>
             </div>
           </div>
@@ -68,13 +73,13 @@ const HeroService = () => {
                 <div className="cs_card_right">
                   <div className="cs_card_right_in">
                     <h2 className="cs_card_title">
-                      <Link href="/service-details">{item.title}</Link>
+                      <Link href={`/service-details/${item.slug}`}>{item.title}</Link>
                     </h2>
-                    <div className="cs_card_subtitle">{item.description}</div>
+                    <div className="cs_card_subtitle">{item.des}</div>
                   </div>
                 </div>
                 <div className="cs_card_link_wrap">
-                  <Link href="/service-details" className="cs_card_link">
+                  <Link href={`/service-details/${item.slug}`} className="cs_card_link">
                     <span>
                       <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
                         xmlns="http://www.w3.org/2000/svg">

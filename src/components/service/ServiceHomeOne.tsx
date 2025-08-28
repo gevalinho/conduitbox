@@ -7,40 +7,6 @@ import { services } from "@/lib/services";
 const service_data = services;
 
 
-// interface DataType {
-//   id: number;
-//   title: string;
-//   des: string;
-// }[]
-
-// const service_data: DataType[] = [
-//   {
-//     id: 1,
-//     title: `Creative Design`,
-//     des: `We don’t just make things look beautiful — we give brands a voice that resonates. From logos and brand identity systems to marketing collaterals, pitch decks, and campaigns, we create visual languages that inspire trust and recognition.
-// Your idea gets a face. Your brand gets a personality.`
-//   },
-//   {
-//     id: 2,
-//     title: `Product & UX Design`,
-//     des: `Every successful product begins with empathy. We dive deep into user research, map journeys, create wireframes, and design interfaces that are not only functional but delightful. Whether it’s a mobile app, a SaaS platform, or a web tool, we design experiences that keep users coming back.
-// Your users don’t just use your product — they enjoy it.`
-//   },
-//   {
-//     id: 3,
-//     title: `Software Development (Web & Mobile)`,
-//     des: `From sleek websites to intuitive mobile applications, we build digital platforms that scale with your growth. Our team blends creativity with technical expertise to deliver fast, secure, and future-ready solutions.
-// You dream it, we code it into reality.`
-//   },
-//   {
-//     id: 4,
-//     title: `Digital Marketing`,
-//     des: `Great brands deserve to be seen. Through SEO, PPC, email campaigns, and digital strategy, we make sure your business isn’t just online — it’s found, remembered, and trusted.
-// Because visibility is the first step to impact.`
-//   },
-
-// ]
-
 const ServiceHomeOne = () => {
   return (
     <>

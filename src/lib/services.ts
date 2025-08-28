@@ -1,10 +1,13 @@
 // lib/services.ts
+export type Faq = { q: string; a: string };
+
 export type Service = {
   id: number;
   title: string;
   des: string;
   slug: string;
   features?: string[];
+  faqs?: Faq[];
 };
 
 export const services: Service[] = [
@@ -19,7 +22,11 @@ Your idea gets a face. Your brand gets a personality.`,
       `Dev online. From website design`,
       `Implementation evolving world of digital to driv`,
       `Launch growth and reach your goals.`,
-    ]
+    ],
+    faqs: [
+      { q: "What’s the typical timeline?", a: "2–6 weeks depending on scope." },
+      { q: "Do you provide source files?", a: "Yes, all editable assets." },
+    ],
   },
   {
     id: 2,
@@ -45,7 +52,11 @@ features: [
     `Dev online. From website design`,
     `Implementation evolving world of digital to driv`,
     `Launch growth and reach your goals.`,
-  ]
+  ],
+  faqs: [
+      { q: "What’s the typical timeline?", a: "2–6 weeks depending on scope." },
+      { q: "Do you provide source files?", a: "Yes, all editable assets." },
+    ],
   },
   {
     id: 4,
@@ -58,7 +69,45 @@ features: [
     `Dev online. From website design`,
     `Implementation evolving world of digital to driv`,
     `Launch growth and reach your goals.`,
-  ]
+  ],
+  faqs: [
+      { q: "What’s the typical timeline?", a: "2–6 weeks depending on scope." },
+      { q: "Do you provide source files?", a: "Yes, all editable assets." },
+    ],
+  },
+  {
+    id: 5,
+    title: "Social Media Campaigns & Marketing",
+    slug: "social-media-campaigns-marketing",
+    des: `We turn social platforms into storytelling stages. From strategy to design and campaign execution, we help brands create engaging conversations that spark loyalty and drive results.
+It’s not just about likes — it’s about meaningful connections.`,
+features: [
+    `Design Welcome to our digital agency!`,
+    `Dev online. From website design`,
+    `Implementation evolving world of digital to driv`,
+    `Launch growth and reach your goals.`,
+  ],
+  faqs: [
+      { q: "What’s the typical timeline?", a: "2–6 weeks depending on scope." },
+      { q: "Do you provide source files?", a: "Yes, all editable assets." },
+    ],
+  },
+  {
+    id: 6,
+    title: "Data & Performance Analytics",
+    slug: "data-performance-analytics",
+    des: `Every decision deserves insight. We set up performance tracking, analyze data, and optimize campaigns so your investments deliver maximum return.
+Because growth without data is just guesswork.`,
+features: [
+    `Design Welcome to our digital agency!`,
+    `Dev online. From website design`,
+    `Implementation evolving world of digital to driv`,
+    `Launch growth and reach your goals.`,
+  ],
+  faqs: [
+      { q: "What’s the typical timeline?", a: "2–6 weeks depending on scope." },
+      { q: "Do you provide source files?", a: "Yes, all editable assets." },
+    ],
   },
 ];
 
