@@ -18,6 +18,7 @@ import BrandHomeOne from '@/components/brand/BrandHomeOne';
 import FooterOne from '@/layouts/footers/FooterOne';
 import Wrapper from '@/layouts/Wrapper';
 import VideoPopup from '@/components/modals/VideoPopup';
+import OurPromise from '@/components/awards/OurPromise';
 
 
 // export const metadata = {
@@ -39,7 +40,8 @@ const index = () => {
             <AboutHomeOne />
             <ServiceHomeOne />
             <PortfolioHomeOne />
-            <AwardsHomeOne />
+            {/* <AwardsHomeOne /> */}
+            <OurPromise />
             <Testimonial />
             <FunFactHomeOne />
             <VideoHomeOne setIsVideoOpen={setIsVideoOpen} />
