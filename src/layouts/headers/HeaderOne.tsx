@@ -14,7 +14,7 @@ interface DataType {
 	id: number;
 	title: string;
 	link: string;
-	has_dropdown: boolean;
+	has_dropdown?: boolean;
 	sub_menu?: {
 		id: number;
 		title: string;
@@ -28,34 +28,34 @@ const menu_data: DataType[] = [
 		id: 1,
 		title: "Home",
 		link: "/",
-		has_dropdown: true,
-		sub_menu: [
-			{
-				id: 1,
-				title: "Digital Agency",
-				link: "/",
-			},
-			{
-				id: 2,
-				title: "Startup Agency",
-				link: "/startup-agency",
-			},
-			{
-				id: 3,
-				title: "Design Studio",
-				link: "/design-studio",
-			},
-			{
-				id: 4,
-				title: "Creative Protfolio",
-				link: "/creative-protfolio",
-			},
-			{
-				id: 5,
-				title: "Marketing Agency",
-				link: "/marketing-agency",
-			},
-		]
+		// has_dropdown: false,
+		// sub_menu: [
+		// 	{
+		// 		id: 1,
+		// 		title: "Digital Agency",
+		// 		link: "/",
+		// 	},
+		// 	{
+		// 		id: 2,
+		// 		title: "Startup Agency",
+		// 		link: "/startup-agency",
+		// 	},
+		// 	{
+		// 		id: 3,
+		// 		title: "Design Studio",
+		// 		link: "/design-studio",
+		// 	},
+		// 	{
+		// 		id: 4,
+		// 		title: "Creative Protfolio",
+		// 		link: "/creative-protfolio",
+		// 	},
+		// 	{
+		// 		id: 5,
+		// 		title: "Marketing Agency",
+		// 		link: "/marketing-agency",
+		// 	},
+		// ]
 	},
 	{
 		id: 2,

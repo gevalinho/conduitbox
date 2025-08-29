@@ -9,7 +9,7 @@ interface DataType {
   id: number;
   title: string;
   link: string;
-  has_dropdown: boolean;
+  has_dropdown?: boolean;
   sub_menu?: {
     id: number;
     title: string;
@@ -23,34 +23,34 @@ const menu_data: DataType[] = [
     id: 1,
     title: "Home",
     link: "/",
-    has_dropdown: true,
-    sub_menu: [
-      {
-        id: 1,
-        title: "Digital Agency",
-        link: "/",
-      },
-      {
-        id: 2,
-        title: "Startup Agency",
-        link: "/startup-agency",
-      },
-      {
-        id: 3,
-        title: "Design Studio",
-        link: "/design-studio",
-      },
-      {
-        id: 4,
-        title: "Creative Protfolio",
-        link: "/creative-protfolio",
-      },
-      {
-        id: 5,
-        title: "Marketing Agency",
-        link: "/marketing-agency",
-      },
-    ]
+    // has_dropdown: true,
+    // sub_menu: [
+    //   {
+    //     id: 1,
+    //     title: "Digital Agency",
+    //     link: "/",
+    //   },
+    //   {
+    //     id: 2,
+    //     title: "Startup Agency",
+    //     link: "/startup-agency",
+    //   },
+    //   {
+    //     id: 3,
+    //     title: "Design Studio",
+    //     link: "/design-studio",
+    //   },
+    //   {
+    //     id: 4,
+    //     title: "Creative Protfolio",
+    //     link: "/creative-protfolio",
+    //   },
+    //   {
+    //     id: 5,
+    //     title: "Marketing Agency",
+    //     link: "/marketing-agency",
+    //   },
+    // ]
   },
   {
     id: 2,
@@ -58,44 +58,44 @@ const menu_data: DataType[] = [
     link: '/about',
     has_dropdown: false
   },
-  {
-    id: 3,
-    title: "Pages",
-    link: "/about",
-    has_dropdown: true,
-    sub_menu: [
-      {
-        id: 1,
-        title: "About",
-        link: "/about",
-      },
-      {
-        id: 2,
-        title: "Team",
-        link: "/team",
-      },
-      {
-        id: 3,
-        title: "Team Details",
-        link: "/team-details",
-      },
-      {
-        id: 4,
-        title: "Contact",
-        link: "/contact",
-      },
-      {
-        id: 5,
-        title: "Faq",
-        link: "/faq",
-      },
-      {
-        id: 6,
-        title: "Error",
-        link: "/error",
-      }
-    ]
-  },
+  // {
+  //   id: 3,
+  //   title: "Pages",
+  //   link: "/about",
+  //   has_dropdown: true,
+  //   sub_menu: [
+  //     {
+  //       id: 1,
+  //       title: "About",
+  //       link: "/about",
+  //     },
+  //     {
+  //       id: 2,
+  //       title: "Team",
+  //       link: "/team",
+  //     },
+  //     {
+  //       id: 3,
+  //       title: "Team Details",
+  //       link: "/team-details",
+  //     },
+  //     {
+  //       id: 4,
+  //       title: "Contact",
+  //       link: "/contact",
+  //     },
+  //     {
+  //       id: 5,
+  //       title: "Faq",
+  //       link: "/faq",
+  //     },
+  //     {
+  //       id: 6,
+  //       title: "Error",
+  //       link: "/error",
+  //     }
+  //   ]
+  // },
   {
     id: 4,
     title: "Services",
@@ -107,11 +107,11 @@ const menu_data: DataType[] = [
         title: "Services",
         link: "/service",
       },
-      {
-        id: 2,
-        title: "Services Details",
-        link: "/service-details",
-      }
+      // {
+      //   id: 2,
+      //   title: "Services Details",
+      //   link: "/service-details",
+      // }
     ]
   },
   {
@@ -125,31 +125,31 @@ const menu_data: DataType[] = [
         title: "Portfolio",
         link: "/portfolio",
       },
-      {
-        id: 2,
-        title: "Portfolio Details",
-        link: "/portfolio-details",
-      }
+      // {
+      //   id: 2,
+      //   title: "Portfolio Details",
+      //   link: "/portfolio-details",
+      // }
     ]
   },
-  {
-    id: 6,
-    title: "Blog",
-    link: "/blog",
-    has_dropdown: true,
-    sub_menu: [
-      {
-        id: 1,
-        title: "Blog",
-        link: "/blog",
-      },
-      {
-        id: 2,
-        title: "Blog Details",
-        link: "/blog-details",
-      }
-    ]
-  },
+  // {
+  //   id: 6,
+  //   title: "Blog",
+  //   link: "/blog",
+  //   has_dropdown: true,
+  //   sub_menu: [
+  //     {
+  //       id: 1,
+  //       title: "Blog",
+  //       link: "/blog",
+  //     },
+  //     {
+  //       id: 2,
+  //       title: "Blog Details",
+  //       link: "/blog-details",
+  //     }
+  //   ]
+  // },
   {
     id: 7,
     title: "Contact",

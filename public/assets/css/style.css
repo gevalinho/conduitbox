@@ -1539,6 +1539,10 @@ label {
     .cs_seciton_heading.cs_style1 .cs_section_title::before {
         top: 1px;
     }
+    .gevalinhon_portfolio_title {
+        margin: 50px;
+        padding: 20px 20px 20px 20px;
+    }
 }
 
 .cs_partner_logo_wrap {

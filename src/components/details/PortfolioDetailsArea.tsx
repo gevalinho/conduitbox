@@ -4,6 +4,7 @@
 import React from 'react';
 
 import Image from 'next/image';
+import type { Portfolio } from '@/lib/portfolio';
 
 import protfolio_details_1 from "@/assets/img/protfolio_details_1.jpg"; 
 import protfolio_details_2 from "@/assets/img/portfoliodetails_2.jpg"; 
@@ -12,19 +13,34 @@ import protfolio_details_4 from "@/assets/img/portfolio_solution_1.jpg";
 import protfolio_details_5 from "@/assets/img/portfolio_solution_2.jpg"; 
 import protfolio_details_6 from "@/assets/img/portfolio_solution_3.jpg"; 
 
+type Props = { portfolio?: Portfolio };
 
 
-const PortfolioDetailsArea = () => {
+const PortfolioDetailsArea = ({ portfolio }: Props) => {
+  const title = portfolio?.title ?? "Our Portfolio";
+  const des = portfolio?.des ?? "";
+  const client = portfolio?.client ?? "";
+  const challenge = portfolio?.challenge ?? "";
+  const solution = portfolio?.solution ?? "";
+  const features = portfolio?.features ?? [];
+  const technologies = portfolio?.technologies ?? [];
+  const service = portfolio?.service ?? [];
+  const date = portfolio?.date ?? "";
+  const impact = portfolio?.impact ?? "";
+  const impact_features = portfolio?.impact_features ?? [];
+  const deliverables = portfolio?.deliverables ?? [];
   return (
     <>
       <div className="cs_height_219 cs_height_lg_120"></div> 
       <section>
         <div className="container">
-          <div className="cs_section_heading cs_style_1 cs_type_1">
+          <div className="cs_section_heading cs_style_1 cs_type_1  d-flex align-items-center justify-content-between
+              gap-5 flex-wrap">
             <div className="cs_section_heading_text">
-              <h2 className="cs_section_title anim_text_writting">
-                Aske - Task Management Web And Mobile Application
-              </h2>
+              <h2 className="cs_section_title anim_text_writting m-0 text-break">{title}</h2>
+              {des && (
+                <p className="cs_section_subtitle m-0">{des}</p>
+              )}
             </div>
             <div className="cs_section_heading_right cs_btn_anim">
               <div className="cs_btn cs_style_2 anim_div_ShowZoom">
@@ -47,7 +63,8 @@ const PortfolioDetailsArea = () => {
                   <div className="cs_text_style_1">
                     <p className="cs_headed_text">Client</p>
                     <h6 className="cs_title_text">
-                      Faulsk Company Inc <br /> Canada
+                      {/* Faulsk Company Inc <br /> Canada */}
+                      {client}
                     </h6>
                   </div>
                 </div>
@@ -55,7 +72,8 @@ const PortfolioDetailsArea = () => {
                   <div className="cs_text_style_1">
                     <p className="cs_headed_text">Services</p>
                     <h6 className="cs_title_text">
-                      UX Research, Wireframing,<br /> UI Design
+                      {/* UX Research, Wireframing,<br /> UI Design */}
+                      {service?.join(", ")}
                     </h6>
                   </div>
                 </div>
@@ -85,16 +103,17 @@ const PortfolioDetailsArea = () => {
               <div className="cs_img_show_text cs_text_style_1">
                 <h4 className="cs_heading_text anim_heading_title">Challanges</h4>
                 <p className="cs_text_style_body">
-                  Welcome to our digital agency! We specialize in helping businesses like yours succeed
+                  {/* Welcome to our digital agency! We specialize in helping businesses like yours succeed
                   online. From website design and development to digital marketing and adver tising, we
                   have the tools and expertise to elevate your online presence. Welcome to our digital
                   agency! We specialize in helping businesses like yours online. From website design and
                   development to digital marketing and advertising, we have the tools and expertise to
                   elevate your online presence. Welcome to our digital
-                  agency! We specialize in helping businesses like yours succeed online.
+                  agency! We specialize in helping businesses like yours succeed online. */}
+                  {challenge}
                 </p>
               </div>
-              <div className="cs_ul_ml">
+              {/* <div className="cs_ul_ml">
                 <ul>
                   <li>Design Welcome to our digital agency!</li>
                   <li>
@@ -107,7 +126,7 @@ const PortfolioDetailsArea = () => {
                     Launch growth and reach your goals. Implementation evolving world of digital.
                   </li>
                 </ul>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -136,15 +155,23 @@ const PortfolioDetailsArea = () => {
                     Solutions
                   </h4>
                   <p className="cs_text_style_body">
-                    Welcome to our digital agency! We specialize in helping businesses like yours
-                    succeed online. From website design and development to digital marketing and adver
-                    tising, we have the tools and expertise to elevate your online presence. Welcome to
-                    our digital
-                    agency! We specialize in helping businesses like yours online. From website design
-                    and development to digital marketing and advertising, we have the tools and
-                    expertise to elevate your online presence.
+                    {solution}
                   </p>
                 </div>
+
+                 <div className="cs_ul_ml">
+               { features && features.length > 0 && (
+                  <ul className="cs_ul_ml">
+                    {features.map((item, i) => (
+                      <li key={i}>
+                        <strong>{item.heading} – </strong>
+                        {item.text}
+                      </li>                    
+                    ))} 
+                  </ul>
+                ) }
+              </div>
+
                 <div className="cs_solutions_section_img_show">
                   <div className="portfolio_solution_1 reveal">
                     <Image src={protfolio_details_4} alt="portfolio_solution_1" />
@@ -156,9 +183,62 @@ const PortfolioDetailsArea = () => {
                     <Image src={protfolio_details_6} alt="portfolio_solution_3" />
                   </div>
                 </div>
-                <div className="cs_img_footer_title cs_color_1 anim_text_upanddowns">
+                {/* <div className="cs_img_footer_title cs_color_1 anim_text_upanddowns">
                   <p>The End - thank you stay with us!</p>
+                </div> */}
+                <div className="mt-5">
+                <div className="cs_solutions_section anim_div_ShowDowns">
+                <div>
+                  <h4 className="cs_heading_text anim_heading_title ">
+                    The Impact
+                  </h4>
+                  <p className="cs_text_style_body">
+                    {impact}
+                  </p>
                 </div>
+
+                 <div className="cs_ul_ml">
+               { features && features.length > 0 && (
+                  <ul className="cs_ul_ml">
+                    {impact_features.map((item, i) => (
+                      <li key={i}>
+                      
+                        {item}
+                      </li>                    
+                    ))} 
+                  </ul>
+                ) }
+              </div>
+              </div>
+              </div>
+
+<div className="mt-5">
+                <div className="cs_solutions_section anim_div_ShowDowns">
+                <div>
+                  <h4 className="cs_heading_text anim_heading_title ">
+                    Deliverales 
+                  </h4>
+                  {/* <p className="cs_text_style_body">
+                    
+                  </p> */}
+                </div>
+
+                 <div className="cs_ul_ml">
+               { deliverables && deliverables.length > 0 && (
+                  <ul className="cs_ul_ml">
+                    {deliverables.map((item, i) => (
+                      <li key={i}>
+                      
+                        {item}
+                      </li>                    
+                    ))} 
+                  </ul>
+                ) }
+              </div>
+              </div>
+              </div>
+
+                
               </div>
             </div>
           </div>

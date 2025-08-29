@@ -8,45 +8,12 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import portfolio_img_1 from '@/assets/img/portfolio_1.jpg';
 import portfolio_img_2 from '@/assets/img/portfolio_2.jpg';
 import portfolio_img_3 from '@/assets/img/portfolio_3.jpg';
+import { portfolio_data } from '@/lib/portfolio';
+const portfolio_slider = portfolio_data
 
-interface DataType {
-  img: StaticImageData;
-  title: string;
-  category: string;
-}[]
 
-const portfolio_slider: DataType[] = [
-  {
-    img: portfolio_img_1,
-    title: `Project Task Management`,
-    category: `Digital Services / App Design`,
-  },
-  {
-    img: portfolio_img_2,
-    title: `Project Task Management`,
-    category: `Digital Services / Web Design`,
-  },
-  {
-    img: portfolio_img_3,
-    title: `Project Task Management`,
-    category: `Digital Services / Figma Design`,
-  },
-  {
-    img: portfolio_img_1,
-    title: `Project Task Management`,
-    category: `Digital Services / App Design`,
-  },
-  {
-    img: portfolio_img_2,
-    title: `Project Task Management`,
-    category: `Digital Services / Web Design`,
-  },
-  {
-    img: portfolio_img_3,
-    title: `Project Task Management`,
-    category: `Digital Services / Figma Design`,
-  },
-]
+
+
 
 
 const PortfolioHomeOne = () => {
@@ -61,7 +28,7 @@ const PortfolioHomeOne = () => {
                 Portfolio
               </div>
               <h2 className="cs_section_title anim_heading_title">
-                Some Recent Project We Successfully Done
+                Some Recent Project We Successfully Done 
               </h2>
             </div>
           </div>
@@ -79,7 +46,7 @@ const PortfolioHomeOne = () => {
           {portfolio_slider.map((item, i) =>
             <SwiperSlide key={i} className="swiper-slide">
               <div className="cs_horizontal_scroll">
-                <Link href="/portfolio-details" className="cs_portfolio cs_style_1">
+                <Link href={`/portfolio-details/${item.slug}`} className="cs_portfolio cs_style_1">
                   <div className="cs_portfolio_img">
                     <Image src={item.img} alt="Thumb" />
                   </div>

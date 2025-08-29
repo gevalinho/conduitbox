@@ -22,7 +22,7 @@ const ServiceAreaDetails = ({ service }: Props) => {
               Specialization & Working Process
             </h4>
             <p className="cs_mp0 anim_text">
-              Welcome to our digital agency! We specialize in helping businesses like yours succeed online.
+              Welcome to our digital agency! checking something GEVALINHO We specialize in helping businesses like yours succeed online.
               From website design and development to digital marketing and advertising, we have the tools and
               expertise to elevate your online presence.
             </p>
