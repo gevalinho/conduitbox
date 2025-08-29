@@ -313,7 +313,26 @@ export const portfolio_data: Portfolio[] = [
 	},
 ]
 
-export const getPortfolioBySlug = (slug: string) =>
-  portfolio_data.find((s) => s.slug === slug);
 
-export const portfolioParams = portfolio_data.map((s) => ({ slug: s.slug }));
+
+export const getPortfolioBySlug = (slug: string) =>
+  portfolio_data.find((p) => p.slug === slug);
+
+export function getPrevNextPortfolio(slug: string, bounded = false) {
+  const idx = portfolio_data.findIndex((p) => p.slug === slug);
+  if (idx === -1) return { prev: undefined, next: undefined };
+
+  if (bounded) {
+    return {
+      prev: idx > 0 ? portfolio_data[idx - 1] : undefined,
+      next: idx < portfolio_data.length - 1 ? portfolio_data[idx + 1] : undefined,
+    };
+  }
+
+  // wrap-around
+  const prev = portfolio_data[(idx - 1 + portfolio_data.length) % portfolio_data.length];
+  const next = portfolio_data[(idx + 1) % portfolio_data.length];
+  return { prev, next };
+}
+
+export const portfolioParams = portfolio_data.map((p) => ({ slug: p.slug }));
