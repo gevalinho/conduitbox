@@ -17,3 +17,36 @@
 @import '../../public/assets/css/plugins/lightgallery.min.css';
 
 @import '../../public/assets/sass/style.scss';
+
+
+
+/* --- Mobile scroll fixes & min width --- */
+
+/* Prevent layout collapsing below small widths */
+html, body { min-width: 320px; } /* or 360px if your design needs it */
+
+/* Let mobile use native scrolling (kill transform-based smooth scroll) */
+@media (hover: none) and (pointer: coarse) {
+  html, body {
+    overflow: auto !important;
+    height: auto !important;
+  }
+
+  /* If template uses these for smooth scrolling, disable on touch */
+  #smooth-wrapper,
+  #smooth-content {
+    transform: none !important;
+    will-change: auto !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+}
+
+/* Momentum scrolling on iOS */
+#smooth-content, .scrollable { -webkit-overflow-scrolling: touch; }
+
+/* Full-height sections behave on mobile chrome */
+.min-h-dvh { min-height: 100dvh; }
+
+/* Defensive: only lock body when menu is OPEN */
+body.menu-open { overflow: hidden; }

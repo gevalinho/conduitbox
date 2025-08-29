@@ -22,3 +22,13 @@ export default function RootLayout({
     </html>
   );
 }
+
+// app/layout.tsx
+import type { Viewport } from "next";
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+};
+
