@@ -10,6 +10,7 @@ import AboutHomeFour from '@/components/about/AboutHomeFour';
 import PortfolioDetailsArea from '@/components/details/PortfolioDetailsArea';
 import { portfolioParams, getPortfolioBySlug } from '@/lib/portfolio';
 import { notFound } from "next/navigation";
+import MobileScrollFix from '@/components/common/MobileScrollFix';
 
 
 
@@ -42,6 +43,7 @@ const portfolio = getPortfolioBySlug(params.slug);
       <HeaderOne />
       <div id="smooth-wrapper">
         <div id="smooth-content">
+          <MobileScrollFix /> 
           <main>
             <PortfolioDetailsArea portfolio={portfolio}/>
             <AboutHomeFour />

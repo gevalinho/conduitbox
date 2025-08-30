@@ -23,7 +23,6 @@ export default function RootLayout({
   );
 }
 
-// app/layout.tsx
 import type { Viewport } from "next";
 
 export const viewport: Viewport = {

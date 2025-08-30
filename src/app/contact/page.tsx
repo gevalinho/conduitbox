@@ -5,6 +5,7 @@ import Wrapper from '@/layouts/Wrapper';
 import FooterOne from '@/layouts/footers/FooterOne';
 import HeaderOne from '@/layouts/headers/HeaderOne';
 import React from 'react';
+import MobileScrollFix from '@/components/common/MobileScrollFix';
 
 // export const metadata = {
 //   title: "Contact Vixan - Digital  Creative Agency Next js Template",  
@@ -17,6 +18,7 @@ const index = () => {
       <HeaderOne />
       <div id="smooth-wrapper">
         <div id="smooth-content">
+           <MobileScrollFix /> 
           <main>
         <ContactArea />
         </main>
