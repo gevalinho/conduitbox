@@ -51,7 +51,7 @@ export default function Page({ params }: Params) {
         </div>
       </div>
 
-{/* <Script id="service-jsonld" type="application/ld+json"
+<Script id="service-jsonld" type="application/ld+json"
   dangerouslySetInnerHTML={{
     __html: JSON.stringify({
       "@context": "https://schema.org",
@@ -62,7 +62,7 @@ export default function Page({ params }: Params) {
       areaServed: "Global",
     }),
   }}
-/> */}
+/>
 
     </Wrapper>
   );

@@ -44,10 +44,12 @@ const portfolio = getPortfolioBySlug(params.slug);
       <HeaderOne />
       <div id="smooth-wrapper">
         <div id="smooth-content">
-          <DisableSmoothOnThisPage />
+          {/* <DisableSmoothOnThisPage /> */}
           <main>
             <PortfolioDetailsArea portfolio={portfolio}/>
+           
             <AboutHomeFour />
+          
           </main>
           <FooterOne />
         </div>

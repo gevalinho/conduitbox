@@ -20,7 +20,7 @@ const index = () => {
       <div id="smooth-wrapper">
         <div id="smooth-content">
            {/* <MobileScrollFix />  */}
-           <DisableSmoothOnThisPage />
+           {/* <DisableSmoothOnThisPage /> */}
           <main>
         <ContactArea />
         </main>
