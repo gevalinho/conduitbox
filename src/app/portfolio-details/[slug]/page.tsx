@@ -11,6 +11,7 @@ import PortfolioDetailsArea from '@/components/details/PortfolioDetailsArea';
 import { portfolioParams, getPortfolioBySlug } from '@/lib/portfolio';
 import { notFound } from "next/navigation";
 import MobileScrollFix from '@/components/common/MobileScrollFix';
+import DisableSmoothOnThisPage from '@/components/common/DisableSmoothOnThisPage';
 
 
 
@@ -43,7 +44,8 @@ const portfolio = getPortfolioBySlug(params.slug);
       <HeaderOne />
       <div id="smooth-wrapper">
         <div id="smooth-content">
-          <MobileScrollFix /> 
+          <MobileScrollFix />
+          {/* <DisableSmoothOnThisPage /> */}
           <main>
             <PortfolioDetailsArea portfolio={portfolio}/>
             <AboutHomeFour />
