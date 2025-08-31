@@ -2,8 +2,7 @@
 'use client'
 import Link from "next/link";
 import MobileMenu from "./MobileMenu";
-import UseSticky from "@/hooks/UseSticky";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 
 
 import Image from "next/image";
@@ -167,10 +166,6 @@ const menu_data: DataType[] = [
 
 
 const HeaderOne = () => {
-	const { sticky } = UseSticky()
-
-
-
 	const [active, setActive] = useState<Boolean>(false);
 	const handleActive = () => {
 		setActive(!active)
@@ -187,20 +182,19 @@ const HeaderOne = () => {
 	};
 
 
-	const [lastScrollTop, setLastScrollTop] = useState(0);
+  const lastScrollTop = useRef(0);
   useEffect(() => {
     const handleScroll = () => {
       const header = document.querySelector(".cs_sticky_header") as HTMLElement | null;
 
       if (!header) {
-        console.error("Sticky header element not found");
         return;
       }
 
       const headerHeight = header.offsetHeight + 30;
       const windowTop = window.pageYOffset || document.documentElement.scrollTop;
 
-      if (windowTop >= headerHeight) {
+      if (windowTop > headerHeight) {
         header.classList.add("cs_gescout_sticky");
       } else {
         header.classList.remove("cs_gescout_sticky");
@@ -208,28 +202,27 @@ const HeaderOne = () => {
       }
 
       if (header.classList.contains("cs_gescout_sticky")) {
-        if (windowTop < lastScrollTop) {
+        if (windowTop < lastScrollTop.current) {
           header.classList.add("cs_gescout_show");
         } else {
           header.classList.remove("cs_gescout_show");
         }
       }
 
-      setLastScrollTop(windowTop);
+      lastScrollTop.current = windowTop;
     };
 
     window.addEventListener("scroll", handleScroll);
-    
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [lastScrollTop]);
+  }, []);
 
 
 	return (
 		<>
 
-			<header className={`cs_site_header cs_style1 cs_sticky_header cs_site_header_full_width ${sticky ? 'cs_gescout_sticky' : ''}`}>
+			<header className={`cs_site_header cs_style1 cs_sticky_header cs_site_header_full_width`}>
 				<div className="cs_main_header">
 					<div className="container">
 						<div className="cs_main_header_in">

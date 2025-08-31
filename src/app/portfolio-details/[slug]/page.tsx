@@ -20,7 +20,7 @@ import DisableSmoothOnThisPage from '@/components/common/DisableSmoothOnThisPage
 // };
 
 type Params = { params: { slug: string } };
-
+ 
 export function generateMetadata({ params }: { params: { slug: string } }) {
   const s = getPortfolioBySlug(params.slug);
   if (!s) return {};
@@ -44,8 +44,7 @@ const portfolio = getPortfolioBySlug(params.slug);
       <HeaderOne />
       <div id="smooth-wrapper">
         <div id="smooth-content">
-          <MobileScrollFix />
-          {/* <DisableSmoothOnThisPage /> */}
+          <DisableSmoothOnThisPage />
           <main>
             <PortfolioDetailsArea portfolio={portfolio}/>
             <AboutHomeFour />
@@ -56,5 +55,6 @@ const portfolio = getPortfolioBySlug(params.slug);
     </Wrapper>
   );
 };
+
 
 export default index;
