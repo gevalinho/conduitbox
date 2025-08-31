@@ -3,6 +3,9 @@
 import Link from 'next/link';
 import React from 'react';
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination } from "swiper/modules";
+import 'swiper/css';
+import 'swiper/css/pagination';
 
 
 interface DataType {
@@ -15,21 +18,22 @@ interface DataType {
 const hero_slider: DataType[] = [
   {
     img: `/assets/img/hero_img_1.jpg`,
-    sub_title: "Creative Agency",
+    sub_title: "Digital Services",
     title: "Expert Digital Services for Your Own Business",
-    des: `Welcome to our digital agency! We specialize in helping businesses like yours succeed online. From website design and development to digital marketing and advertising, we have the tools and expertise to elevate your online presence. Let us help you lione evolving world of digital.`
+    des: `Welcome to The ConduitBox! We specialize in helping businesses like yours succeed online. From website design and development to digital marketing and advertising, we have the tools and expertise to elevate your online presence. Let us help you lione evolving world of digital.`
   },
   {
-    img: `/assets/img/hero_img_1.jpg`,
-    sub_title: "Creative Agency",
-    title: "Expert Digital Services for Your Own Business",
-    des: `Welcome to our digital agency! We specialize in helping businesses like yours succeed online. From website design and development to digital marketing and advertising, we have the tools and expertise to elevate your online presence. Let us help you lione evolving world of digital.`
+    img: `/assets/img/hero_img_2.jpg`,
+    sub_title: "Creative Branding",
+    title: "Creative Branding That Stands Out",
+  des: `Your brand is your identity — and we make sure it speaks volumes. At The ConduitBox, we craft unique branding strategies that set you apart, ensuring your business captures attention and builds lasting trust.`
+
   },
   {
-    img: `/assets/img/hero_img_1.jpg`,
-    sub_title: "Creative Agency",
-    title: "Expert Digital Services for Your Own Business",
-    des: `Welcome to our digital agency! We specialize in helping businesses like yours succeed online. From website design and development to digital marketing and advertising, we have the tools and expertise to elevate your online presence. Let us help you lione evolving world of digital.`
+    img: `/assets/img/hero_img_3.jpg`,
+    sub_title: "E-Commerce Solutions",
+    title: "Seamless E-Commerce Solutions",
+  des: `Sell smarter, not harder. Whether you’re starting fresh or scaling up, we design and develop e-commerce platforms that make shopping easy for your customers — and management simple for you.`
   },
 ]
 
@@ -38,9 +42,11 @@ const HeroHomeOne = () => {
   return (
     <>
       <Swiper
+        modules={[Autoplay, Pagination]}
         loop={true}
         slidesPerView={1}
-        autoplay={{ delay: 3000 }}
+       speed={1000}
+        autoplay={{ delay: 5000, disableOnInteraction: false, pauseOnMouseEnter: true }}
         pagination={{ clickable: true }}
         className="cs_slider cs_slider_1">
         {hero_slider.map((item, index) =>
