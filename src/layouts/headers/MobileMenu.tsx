@@ -55,7 +55,7 @@ const menu_data: DataType[] = [
   {
     id: 2,
     title: "Who We Are",
-    link: '/about',
+    link: '/who-we-are',
     has_dropdown: false
   },
   // {
@@ -99,7 +99,7 @@ const menu_data: DataType[] = [
   {
     id: 4,
     title: "What We Do",
-    link: "/service",
+    link: "/what-we-do",
     // has_dropdown: true,
     // sub_menu: [
     //   {
@@ -117,7 +117,7 @@ const menu_data: DataType[] = [
   {
     id: 5,
     title: "Our Work",
-    link: "/portfolio",
+    link: "/our-work",
     // has_dropdown: true,
     // sub_menu: [
     //   {
@@ -153,7 +153,7 @@ const menu_data: DataType[] = [
   {
     id: 7,
     title: "Let’s Talk",
-    link: "/contact",
+    link: "/lets-talk",
     has_dropdown: false,
   }
 

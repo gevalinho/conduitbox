@@ -46,7 +46,7 @@ const PortfolioHomeOne = () => {
           {portfolio_slider.map((item, i) =>
             <SwiperSlide key={i} className="swiper-slide">
               <div className="cs_horizontal_scroll">
-                <Link href={`/portfolio-details/${item.slug}`} className="cs_portfolio cs_style_1">
+                <Link href={`/our-work-details/${item.slug}`} className="cs_portfolio cs_style_1">
                   <div className="cs_portfolio_img">
                     <Image src={item.img} alt="Thumb" />
                   </div>

@@ -72,7 +72,7 @@ const Portfolio = () => {
             <div className="cs_isotop_items_details row">
               {items.map((item, i) => (
                 <div key={i} className="col-md-4 cs_item cs_ui_design cs_development">
-                  <Link href={`/portfolio-details/${item.slug}`} className="cs_portfolio cs_style_1">
+                  <Link href={`/our-work-details/${item.slug}`} className="cs_portfolio cs_style_1">
                     <div className="cs_portfolio_img">
                       <Image src={item.img} className="img-fluid" alt="Thumb" />
                     </div>

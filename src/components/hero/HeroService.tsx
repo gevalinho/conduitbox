@@ -73,13 +73,13 @@ const HeroService = () => {
                 <div className="cs_card_right">
                   <div className="cs_card_right_in">
                     <h2 className="cs_card_title">
-                      <Link href={`/service-details/${item.slug}`}>{item.title}</Link>
+                      <Link href={`/what-we-do-details/${item.slug}`}>{item.title}</Link>
                     </h2>
                     <div className="cs_card_subtitle">{item.des}</div>
                   </div>
                 </div>
                 <div className="cs_card_link_wrap">
-                  <Link href={`/service-details/${item.slug}`} className="cs_card_link">
+                  <Link href={`/what-we-do-details/${item.slug}`} className="cs_card_link">
                     <span>
                       <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
