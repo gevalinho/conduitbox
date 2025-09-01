@@ -60,7 +60,7 @@ const SubscribeHomeOne = () => {
              <div className="cs_footer_info">
                   <div className="">
                     <p className="cs_ternary_color cs_height_lg_50">
-                      {des}
+                      {/* {des} */}
                     </p>   
                   </div>
                 </div></div>      

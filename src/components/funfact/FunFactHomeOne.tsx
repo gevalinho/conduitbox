@@ -14,23 +14,23 @@ const counter_data: DataType[] = [
   {
     id: 1,
     title: `Project Completed`,
-    number: 91,
+    number: 1,
   },
   {
     id: 2,
-    title: `Happy customers`,
-    number: 2,
+    title: `Brands Served`,
+    number: 25,
   },
   {
     id: 3,
-    title: `Years Experiences`,
-    number: 21,
+    title: `Years of Creativity`,
+    number: 10,
   },
-  {
-    id: 4,
-    title: `Awards Achievement`,
-    number: 42,
-  },
+  // {
+  //   id: 4,
+  //   title: `Awards Achievement`,
+  //   number: 42,
+  // },
 ]
 
 const FunFactHomeOne = ({style_2, style_3} :any) => {
@@ -46,7 +46,7 @@ const FunFactHomeOne = ({style_2, style_3} :any) => {
                     <Count number={item.number} add_style={true} />
                   </div>
                   {i === 0 && <span>K</span>}
-                  {i === 1 && <span>K</span>}
+                  {i === 1 && <span></span>}
                 </div>
                 <div className={`cs_funfact_text cs_primary_font ${style_2 ? 'cs_color_1' : ''}`}>
                   <p>{item.title}</p>

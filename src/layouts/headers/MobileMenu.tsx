@@ -54,7 +54,7 @@ const menu_data: DataType[] = [
   },
   {
     id: 2,
-    title: "About",
+    title: "Who We Are",
     link: '/about',
     has_dropdown: false
   },
@@ -98,39 +98,39 @@ const menu_data: DataType[] = [
   // },
   {
     id: 4,
-    title: "Services",
+    title: "What We Do",
     link: "/service",
-    has_dropdown: true,
-    sub_menu: [
-      {
-        id: 1,
-        title: "Services",
-        link: "/service",
-      },
-      // {
-      //   id: 2,
-      //   title: "Services Details",
-      //   link: "/service-details",
-      // }
-    ]
+    // has_dropdown: true,
+    // sub_menu: [
+    //   {
+    //     id: 1,
+    //     title: "Services",
+    //     link: "/service",
+    //   },
+    //   // {
+    //   //   id: 2,
+    //   //   title: "Services Details",
+    //   //   link: "/service-details",
+    //   // }
+    // ]
   },
   {
     id: 5,
-    title: "Portfolio",
+    title: "Our Work",
     link: "/portfolio",
-    has_dropdown: true,
-    sub_menu: [
-      {
-        id: 1,
-        title: "Portfolio",
-        link: "/portfolio",
-      },
-      // {
-      //   id: 2,
-      //   title: "Portfolio Details",
-      //   link: "/portfolio-details",
-      // }
-    ]
+    // has_dropdown: true,
+    // sub_menu: [
+    //   {
+    //     id: 1,
+    //     title: "Portfolio",
+    //     link: "/portfolio",
+    //   },
+    //   // {
+    //   //   id: 2,
+    //   //   title: "Portfolio Details",
+    //   //   link: "/portfolio-details",
+    //   // }
+    // ]
   },
   // {
   //   id: 6,
@@ -152,7 +152,7 @@ const menu_data: DataType[] = [
   // },
   {
     id: 7,
-    title: "Contact",
+    title: "Let’s Talk",
     link: "/contact",
     has_dropdown: false,
   }

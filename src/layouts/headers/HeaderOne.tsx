@@ -58,7 +58,7 @@ const menu_data: DataType[] = [
 	},
 	{
 		id: 2,
-		title: "About",
+		title: "Who We Are",
 		link: '/about',
 		has_dropdown: false
 	},
@@ -102,39 +102,39 @@ const menu_data: DataType[] = [
 	// },
 	{
 		id: 4,
-		title: "Services",
+		title: "What We Do",
 		link: "/service",
-		has_dropdown: true,
-		sub_menu: [
-			{
-				id: 1,
-				title: "Services",
-				link: "/service",
-			},
-			// {
-			// 	id: 2,
-			// 	title: "Services Details",
-			// 	link: "/service-details",
-			// }
-		]
+		// has_dropdown: true,
+		// sub_menu: [
+		// 	{
+		// 		id: 1,
+		// 		title: "Services",
+		// 		link: "/service",
+		// 	},
+		// 	// {
+		// 	// 	id: 2,
+		// 	// 	title: "Services Details",
+		// 	// 	link: "/service-details",
+		// 	// }
+		// ]
 	},
 	{
 		id: 5,
-		title: "Portfolio",
+		title: "Our Work",
 		link: "/portfolio",
-		has_dropdown: true,
-		sub_menu: [
-			{
-				id: 1,
-				title: "Portfolio",
-				link: "/portfolio",
-			},
-			// {
-			// 	id: 2,
-			// 	title: "Portfolio Details",
-			// 	link: "/portfolio-details",
-			// }
-		]
+		// has_dropdown: true,
+		// sub_menu: [
+		// 	{
+		// 		id: 1,
+		// 		title: "Portfolio",
+		// 		link: "/portfolio",
+		// 	},
+		// 	// {
+		// 	// 	id: 2,
+		// 	// 	title: "Portfolio Details",
+		// 	// 	link: "/portfolio-details",
+		// 	// }
+		// ]
 	},
 	// {
 	// 	id: 6,
@@ -156,7 +156,7 @@ const menu_data: DataType[] = [
 	// },
 	{
 		id: 7,
-		title: "Contact",
+		title: "Let’s Talk",
 		link: "/contact",
 		has_dropdown: false,
 	}
@@ -299,8 +299,8 @@ const HeaderOne = () => {
 												d="M7 0.0195312C3.14027 0.0195312 0 3.01027 0 6.68621C0 7.78973 0.289693 8.88387 0.840408 9.85434L6.6172 17.8047C6.69411 17.9373 6.84065 18.0195 7 18.0195C7.15935 18.0195 7.30589 17.9373 7.3828 17.8047L13.1617 9.85105C13.7103 8.88387 14 7.78969 14 6.68617C14 3.01027 10.8597 0.0195312 7 0.0195312ZM7 10.0195C5.07014 10.0195 3.50002 8.52418 3.50002 6.68621C3.50002 4.84824 5.07014 3.35289 7 3.35289C8.92986 3.35289 10.5 4.84824 10.5 6.68621C10.5 8.52418 8.92986 10.0195 7 10.0195Z"
 												fill="white"></path>
 										</svg>
-										<span className="ms-2">46 JOHN ST TORONTO ON <br />
-											&nbsp; &nbsp; &nbsp; &nbsp; M5V 3W2</span>
+										<span className="ms-2">Lagos, Nigeria <br />
+											&nbsp; &nbsp; &nbsp; &nbsp; </span>
 									</p>
 
 									<h4 className="cs_phone_number">
@@ -316,7 +316,8 @@ const HeaderOne = () => {
 												<path
 													d="M15.1294 2.93344C13.5338 1.33791 11.5151 0.330398 9.28656 0.0195312L9.0918 1.40907C11.0169 1.67874 12.7623 2.55141 14.1406 3.92597C15.4477 5.23311 16.3054 6.88483 16.6163 8.70134L17.9983 8.46538C17.635 6.36047 16.6425 4.45033 15.1294 2.93344Z"
 													fill="white"></path>
-											</svg><span className="ms-2">(406)555-0120</span></a>
+											</svg><span className="ms-2">+234 816 889 3767 |
+ &nbsp; &nbsp; &nbsp; &nbsp;+234 816 363 7504</span></a>
 									</h4>
 
 									<ul className="cs_social_link">
@@ -329,7 +330,7 @@ const HeaderOne = () => {
 									<hr className="mt-2 me-5 mb-2" />
 									<h2>
 										<a href="mailto:info@email.com" className="cs_primary_font cs_text_btn"><span
-											className="cs_black">info@email.com</span></a>
+											className="cs_black"></span></a>
 									</h2>
 								</div>
 							</div>

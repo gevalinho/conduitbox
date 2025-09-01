@@ -19,9 +19,9 @@ interface DataType {
 
 const footer_data: DataType = {
   email: ``,
-  phone: ``,
-  location: ``,
-  footer_info: `Founded in July 2015 in Calabar, The ConduitBox was born out of a simple but powerful idea: to be the “conduit” — the unseen wiring — that connects businesses to ideas outside the box.`,
+  phone: `+234 816 889 3767 | +234 816 363 7504`,
+  location: `Lagos, Nigeria`,
+  footer_info: `We are the conduit between imagination and execution — transforming bold ideas into powerful brands, digital experiences, and lasting impact.`,
   links: [
     { title: `HOME`, link: "/" },
     { title: `ABOUT`, link: "/about" },

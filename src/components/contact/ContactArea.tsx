@@ -67,11 +67,11 @@ const ContactArea = () => {
               </div>
             </div>
             <div className="cs_contact_section_2 anim_div_ShowRightSide">
-              <div className="cs_google_map cs_bg" data-src="assets/img/map_img.png">
+              {/* <div className="cs_google_map cs_bg" data-src="assets/img/map_img.png">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d96652.27317354927!2d-74.33557928194516!3d40.79756494697628!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c3a82f1352d0dd%3A0x81d4f72c4435aab5!2sTroy+Meadows+Wetlands!5e0!3m2!1sen!2sbd!4v1563075599994!5m2!1sen!2sbd"
                   allowFullScreen={true}></iframe>
-              </div>
+              </div> */}
               <div className="cs_height_50 cs_height_lg_50"></div>
               <div className="row">
                 <div className="col-md-4">
@@ -88,7 +88,7 @@ const ContactArea = () => {
                     </a>
                     <div className="cs_icon_text">
                       <h6 className="cs_icon_title">Address</h6>
-                      <p className="cs_icon_subtitle">El-Mahalla El-Kubra 37</p>
+                      <p className="cs_icon_subtitle">Lagos, Nigeria</p>
                     </div>
                   </div>
                 </div>
@@ -112,7 +112,7 @@ const ContactArea = () => {
                     </a>
                     <div className="cs_icon_text">
                       <h6 className="cs_icon_title">Phone</h6>
-                      <p className="cs_icon_subtitle">(406) 555-0120</p>
+                      <p className="cs_icon_subtitle">+234 816 889 3767 |<br/> +234 816 363 7504</p>
                     </div>
                   </div>
                 </div>
@@ -133,7 +133,7 @@ const ContactArea = () => {
                     </a>
                     <div className="cs_icon_text">
                       <h6 className="cs_icon_title">Email</h6>
-                      <p className="cs_icon_subtitle">vixan@email.com</p>
+                      <p className="cs_icon_subtitle"></p>
                     </div>
                   </div>
                 </div>
