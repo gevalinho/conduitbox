@@ -14,8 +14,8 @@ const AboutHomeFour = () => {
 								</h3>
 							</div>
 							<div className="cs_section_heading_right cs_btn_anim">
-								<Link href="/contact" className="cs_btn cs_style_1">
-									<span>Contact Us</span>
+								<Link href="/lets-talk" className="cs_btn cs_style_1">
+									<span>Let's Talk</span>
 									<svg
 										width="19"
 										height="13"
