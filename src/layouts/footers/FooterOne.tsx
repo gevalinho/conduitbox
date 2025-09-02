@@ -24,11 +24,11 @@ const footer_data: DataType = {
   footer_info: `We are the conduit between imagination and execution — transforming bold ideas into powerful brands, digital experiences, and lasting impact.`,
   links: [
     { title: `HOME`, link: "/" },
-    { title: `ABOUT`, link: "/about" },
-    { title: `SERVICES`, link: "/service" },
-    { title: `PORTFOLIO`, link: "/portfolio" },
+    { title: `ABOUT`, link: "/who-we-are" },
+    { title: `SERVICES`, link: "/what-we-do" },
+    { title: `PORTFOLIO`, link: "/our-work" },
     // { title: `BLOG`, link: "/blog" },
-    { title: `CONTACT US`, link: "/contact" },
+    { title: `CONTACT US`, link: "/lets-talk" },
   ]
 }
 const { footer_info, email, links, location, phone } = footer_data
