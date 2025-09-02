@@ -42,7 +42,7 @@ const Service = () => {
                       </div>
 
                       <h6 className="cs_work_title">{item.title}</h6>
-                      <p className="cs_work_subtitle">
+                      <p className="cs_work_subtitle m-2">
                         {item.des}
                       </p>
                     </div>
