@@ -7,13 +7,13 @@ type Props = {
   /** If true, disables at ends instead of wrapping */
   bounded?: boolean;
   /** Base path for your detail route */
-  basePath?: "/portfolio-details";
+  basePath?: "/our-work-details";
 };
 
 export default function PortfolioPrevNext({
   currentSlug,
   bounded = false,
-  basePath = "/portfolio-details",
+  basePath = "/our-work-details",
 }: Props) {
   const { prev, next } = getPrevNextPortfolio(currentSlug, bounded);
 

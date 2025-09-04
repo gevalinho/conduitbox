@@ -1,22 +1,54 @@
+import img1 from "@/assets/img/protfolio_details_1.jpg";
+import img2 from "@/assets/img/portfoliodetails_2.jpg";
+import img3 from "@/assets/img/portfoliodetails_1.jpg";
+import img4 from "@/assets/img/portfolio_solution_1.jpg";
+import img5 from "@/assets/img/portfolio_solution_2.jpg";
+import img6 from "@/assets/img/portfolio_solution_3.jpg";
+import the_glen_h_img from "@/assets/img/theglensapartment.png";
+import cltatlantis_h_img from "@/assets/img/protfolio_details_cltatlantis_project_banner.jpg";
+import the_oguntoyinbo_foundation_h_img from "@/assets/img/protfolio_details_oguntoyinbofoundation_1.jpg";
 
 import portfolio_img_6 from "@/assets/img/portfolio_1.jpg";
 import portfolio_img_7 from "@/assets/img/portfolio_2.jpg";
 import portfolio_img_8 from "@/assets/img/portfolio_3.jpg";
 import portfolio_img_9 from "@/assets/img/portfolio_5.jpg";
 import portfolio_img_10 from "@/assets/img/portfolio_6.jpg";
-import portfolio_img_11 from "@/assets/img/portfolio_7.jpg"; 
+import portfolio_img_11 from "@/assets/img/portfolio_7.jpg";
+import portfolio_challeng_1 from "@/assets/img/portfoliodetails_glen_detail_1.jpg"; 
+import portfolio_challeng_2 from "@/assets/img/portfoliodetails_glen_detail_2.jpg";
+import portfolio_solution_1 from "@/assets/img/portfolio_solution_glen_1.jpg";
+import portfolio_solution_2 from "@/assets/img/portfolio_solution_glen_2.jpg";
+import portfolio_solution_3 from "@/assets/img/portfolio_solution_glen_3.jpg";
+import portfolio_img_12 from "@/assets/img/portfolio_8.jpg";
+import portfolio_solution_ctlatilantic_1 from "@/assets/img/portfolio_solution_ctlatilantic_1.jpg";
+import portfolio_solution_ctlatilantic_2 from "@/assets/img/portfolio_solution_ctlatilantic_2.jpg";
+import portfolio_solution_cltatlantis_3 from "@/assets/img/portfolio_solution_cltatlantis_3.jpg";
+import portfolio_solution_oguntoyinbo_1 from "@/assets/img/portfolio_solution_oguntoyinbo_1.jpg";
+import portfolio_solution_oguntoyinbo_2 from "@/assets/img/portfolio_solution_oguntoyinbo_2.jpg";
+import portfolio_solution_oguntoyinbo_3 from "@/assets/img/portfolio_solution_oguntoyinbo_3.jpg";
 
-import Image, { StaticImageData } from 'next/image';
+import { StaticImageData } from 'next/image';
 
 interface featureItems {
 	  heading: string;
 	  text: string;
 }
 
+interface portfolio_img {
+  img: StaticImageData | string;
+}
+
 export type Portfolio = {
   id: number;
   category: string;
   img: StaticImageData;
+  detail_header_img?: portfolio_img;
+  detail_challenge_img_1?: portfolio_img;
+  detail_challenge_img_2?: portfolio_img;
+  detail_solution_img?: portfolio_img;
+  detail_solution_img2?: portfolio_img;
+  detail_solution_img3?: portfolio_img;
+  detail_feature_img1?: portfolio_img;
   title: string;
   des: string;
   slug: string;
@@ -39,6 +71,12 @@ export const portfolio_data: Portfolio[] = [
 		id: 1,
 		category: 'Industry',
 		img: portfolio_img_6,
+    detail_header_img: {img: cltatlantis_h_img},
+    detail_challenge_img_1: {img: portfolio_challeng_1},
+    detail_challenge_img_2: {img: portfolio_challeng_2},
+    detail_solution_img: {img: portfolio_solution_ctlatilantic_1},
+    detail_solution_img2: {img: portfolio_solution_ctlatilantic_2},
+    detail_solution_img3: {img: portfolio_solution_cltatlantis_3},
 		title: "CTL Atlantis Project",
 		des: "Real Estate",
         slug: "cltatlantis-project",
@@ -82,6 +120,12 @@ export const portfolio_data: Portfolio[] = [
 		id: 2,
 		category: 'Industry',
 		img: portfolio_img_7,
+     detail_header_img: {img: the_oguntoyinbo_foundation_h_img},
+    detail_challenge_img_1: {img: portfolio_challeng_1},
+    detail_challenge_img_2: {img: portfolio_challeng_2},
+    detail_solution_img: {img: portfolio_solution_oguntoyinbo_1},
+    detail_solution_img2: {img: portfolio_solution_ctlatilantic_2},
+    detail_solution_img3: {img: portfolio_solution_oguntoyinbo_3},
 		title: "The Oguntoyinbo Foundation",
 		des: "Non-Profit / Advocacy",
         slug: "the-oguntoyinbo-foundation",
@@ -245,6 +289,13 @@ export const portfolio_data: Portfolio[] = [
 		category: 'UI Design',
 		img: portfolio_img_11,
 		title: "Glenn’s Apartment",
+    detail_header_img: {img: the_glen_h_img},
+    detail_challenge_img_1: {img: portfolio_challeng_1},
+    detail_challenge_img_2: {img: portfolio_challeng_2},
+    detail_solution_img: {img: portfolio_solution_1},
+    detail_solution_img2: {img: portfolio_solution_2},
+    detail_solution_img3: {img: portfolio_solution_3},
+    
 		des: "Hospitality / Real Estate",
         slug: "glens-apartment",
 		client: "Glenn’s Apartment",
@@ -281,7 +332,7 @@ export const portfolio_data: Portfolio[] = [
 	{
 		id: 7,
 		category: 'UI Design',
-		img: portfolio_img_11,
+		img: portfolio_img_12,
 		title: "Assurance Base Ltd",
 		des: "Oil & Gas",
         slug: "assurance-base-ltd",
